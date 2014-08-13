@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------------- */
+/*  BREAKPOINT: TESTER */
+/* ----------------------------------------------------------------- */
+/*Tablet  */
+
+@media (max-width: 768px) {
+
+/*	body::before{ 
+		content: "Tablet media query (< 768px) fired"; 
+		font-weight: bold; 
+		display: block; 
+		text-align: center; 
+		background: blue;
+		color: white; 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		z-index: 80000; 
+	}*/
+
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+/*	body::before{ 
+		content: "Mobile media query (< 480px) fired"; 
+		font-weight: bold; 
+		display: block; 
+	 	text-align: center; 
+		background: red; 
+		color: white;
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		z-index: 800000; 
+	}*/
+
+
+}
+
+
+/*Desktop*/
+
+@media (max-width: min-width: 768px) {
+	
+	/*body::before {
+	content: "Desktop size more than 768px";
+	font-weight: bold;
+	display:block;
+	text-align: center;
+	background: rgba(255, 255,0, 0.9);
+	top: 0;
+	left: 0;
+	right:0;
+	z-index: 99;
+	}
+*/
+
+}

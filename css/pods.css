@@ -1,0 +1,113 @@
+/** PODS **/
+
+/* see event.css for event pods */
+
+.pod {
+	font-size: 0.813em;
+	line-height: 1.5em;
+	margin-bottom:2em;
+}
+.pod:last-child {
+	border: 0;
+}
+.pod img {
+	margin-bottom: 1em;
+	border: 1px solid #e3e3e3;
+}
+
+.pod h5 {
+    margin:0 0 0 0;
+	padding:0;
+}
+.pod p {
+	margin-top:0.30em;
+}
+
+.submitted_by {
+}
+
+/*hide the description if pod is in the right column 
+- except text markup! see below for settings */
+#sidebar-right .pod p {
+	display:none;
+}
+
+/*BASIC PAGE*/
+
+.page .pod {}
+
+/*ARTICLE (BLOG)*/
+
+.article .pod {}
+
+/*MEDIA OBJECT*/
+
+.media_object .pod {}
+
+/*TEXT MARKUP */
+
+/*if text markup is in the RIGHT column*/
+#sidebar-right .text_markup {
+	border: 1px solid #e3e3e3;
+	padding: 1.250em;
+	border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    margin-bottom:1em;
+}
+
+#sidebar-right .text_markup img {
+	border: none;
+}
+
+
+.text-markup-pod  {
+	font-size: 0.875em;
+	line-height: 1.5em;
+}
+
+
+.text-markup-pod h1, 
+.text-markup-pod h2,
+.text-markup-pod h3,
+.text-markup-pod h4,
+.text-markup-pod h5,
+.text-markup-pod h6 {
+	margin-top:0;
+	padding-top:0;
+	margin-bottom: 0.5em;
+}
+
+.text-markup-pod ul {
+	margin-bottom: 1.625em;
+}
+
+.text-markup-pod p .actionButton{
+	font-size: 1.125em;
+	padding: 0.375em 2.375em 0.375em 0.5em;
+}
+
+#main-content .pod {
+
+}
+
+#sidebar-left .pod {
+
+}
+
+
+
+/* ----------------------------------------------------------------- */
+/*  large mobile, i.e. tablet in portrait mode */
+/* ----------------------------------------------------------------- */
+@media screen and (max-width: 650px) and (min-width: 440px) {
+
+}
+
+
+/* ----------------------------------------------------------------- */
+/*  tablets & desktop */
+/* ----------------------------------------------------------------- */
+@media screen and (min-width: 651px) {
+
+}

@@ -1,0 +1,66 @@
+/*GLOBAL LAYOUT*/
+
+/* main page grid container */
+.grid-container-main {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 0;
+}
+
+
+#main-content {
+padding:0 16px 0 10px;
+}
+
+#page {
+	padding:0 1em 5em 1em;
+    background-color: #FFFFFF;
+}
+
+
+/*  
+    This is just a bordered placeholder div for building blocks
+*/
+.temp-building-block {
+        min-height: 200px;
+        margin: 30px 0px 30px 0px;
+        border: 1px solid #dedede;
+}
+
+#sidebar-right { /*give sidebar some space on mobile*/
+	padding:0 16px 0 10px;
+	margin:0;
+}
+
+/*  desktop */
+/* --------------------------------------------- */
+@media screen and (min-width: 909px) {
+
+/* main page grid container */
+.grid-container-main {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 0;
+}
+
+
+#main-content {
+padding-right: 1em;
+padding-bottom:5em;
+}
+
+
+/*  
+    This is just a bordered placeholder div for building blocks
+*/
+.temp-building-block {
+        min-height: 200px;
+        margin: 30px 0px 30px 0px;
+        border: 1px solid #dedede;
+}
+
+#sidebar-right {
+padding-top:30px;
+}
+
+}

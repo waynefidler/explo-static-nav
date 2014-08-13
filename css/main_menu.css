@@ -1,0 +1,823 @@
+/*============================================================================
+    MOBILE WRAPPER (move wrapper stuff to layout.css)
+/*===========================================================================*/
+   
+/* offset admin menu when admin menu wraps to 3 lines*/
+.admin-bar-offset {
+    top: 76px !important;
+}
+    
+/*edit tabs offset*/
+.admin-bar-page-offset {
+    margin-top: 130px !important;
+}
+
+/*wraps around 'page' so we can push it to the side to uncover the mobile menu*/
+#page-wrapper {
+    background-color: rgba(255,255,255,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding:0;
+    -webkit-backface-visibility: hidden;
+    max-width:100%;
+    height:100%;
+}
+
+/*pushes down page so it is not covered by mobile header*/
+.grid-container-main {
+    margin-top: 80px;
+}
+
+/*creates animation when user taps the mobile menu icon    */
+
+    @keyframes mobile-animation-in
+    {
+    from {-webkit-transform: translateX(0px) translateZ(0);}
+    to {-webkit-transform: translateX(268px) translateZ(0);}
+    }   
+
+    @-webkit-keyframes mobile-animation-in /* Safari and Chrome */
+    {
+    from {-webkit-transform: translateX(0px) translateZ(0);}
+    to {-webkit-transform: translateX(268px) translateZ(0);}
+    }   
+
+    @-moz-keyframes mobile-animation-in /* Safari and Chrome */
+    {
+    from {-moz-transform: translateX(0px) translateZ(0);}
+    to {-moz-transform: translateX(268px) translateZ(0);}
+    }   
+
+    @-o-keyframes mobile-animation-in /* Safari and Chrome */
+    {
+    from {-o-transform: translateX(0px) translateZ(0);}
+    to {-o-transform: translateX(268px) translateZ(0);}
+    }   
+    
+
+    @keyframes mobile-animation-out
+    {
+    from {-webkit-transform: translateX(268px) translateZ(0);}
+    to {-webkit-transform: translateX(0px) translateZ(0);}
+    }   
+
+    @-webkit-keyframes mobile-animation-out /* Safari and Chrome */
+    {
+    from {-webkit-transform: translateX(268px) translateZ(0);}
+    to {-webkit-transform: translateX(0px) translateZ(0);}
+    }   
+
+    @-moz-keyframes mobile-animation-out /* Safari and Chrome */
+    {
+    from {-moz-transform: translateX(268px) translateZ(0);}
+    to {-moz-transform: translateX(0px) translateZ(0);}
+    }   
+
+    @-o-keyframes mobile-animation-out /* Safari and Chrome */
+    {
+    from {-o-transform: translateX(268px) translateZ(0);}
+    to {-o-transform: translateX(0px) translateZ(0);}
+    }
+
+.mobile-animate-in {
+    animation-name: mobile-animation-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-inout;
+
+    -webkit-animation-name: mobile-animation-in;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-inout;
+
+    -moz-animation-name: mobile-animation-in;
+    -moz-animation-duration: .5s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-inout;
+
+    -o-animation-name: mobile-animation-in;
+    -o-animation-duration: .5s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: ease-inout;
+}
+
+.mobile-animate-out {
+    animation-name: mobile-animation-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-inout;
+
+    -webkit-animation-name: mobile-animation-out;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-inout;
+
+    -moz-animation-name: mobile-animation-out;
+    -moz-animation-duration: .5s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-inout;
+
+    -o-animation-name: mobile-animation-out;
+    -o-animation-duration: .5s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: ease-inout;
+}
+
+/*TABLET & DESKTOP -- WRAPPER 
+================================================*/
+
+@media screen and (min-width: 768px){
+
+.admin-bar-offset  {
+    top: 30px !important;
+}
+/*edit tabs offset*/
+.admin-bar-page-offset {
+    margin-top: 30px !important;
+}
+
+.grid-container-main {
+    margin-top: 0px;
+}
+
+#page-wrapper {
+    background-color: rgba(255,255,255,1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+    -webkit-backface-visibility: hidden;
+    height:100%;
+    /*resets the postion of the page wrapper if the user 
+    has opened the mobile menu then resizes the screen
+    needs to be refined (add to script?) and check that 
+    it works on all browsers...*/
+    animation-name: mobile-animation-out;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-inout;
+    -webkit-animation-name: mobile-animation-out;
+    -webkit-animation-duration: 0s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-inout;
+    -moz-animation-name: mobile-animation-out;
+    -moz-animation-duration: 0s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-inout;
+    -o-animation-name: mobile-animation-out;
+    -o-animation-duration: 0s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: ease-inout;
+   }
+}
+
+/*TABLET PORTRAIT WRAPPER
+================================================================*/
+@media screen and (min-width: 768px) and (max-width: 929px){
+
+    #page-wrapper {
+        padding: 0;
+    }
+
+    .grid-container-main {
+         margin-top: 0px;
+    }
+}
+
+/*DESKTOP (930px) to DESKTOP (1079px) WRAPPER
+=================================================================*/
+@media screen and (min-width: 930px) and (max-width: 1079px){
+
+      #page-wrapper {
+        padding: 0;
+   }
+
+       .grid-container-main {
+        margin-top: 0px;
+    }
+}
+
+/* DESKTOP 1080px - 1200px (WRAPPER
+===============================================================*/
+@media screen and (min-width: 1080px) {
+
+    #page-wrapper {
+        padding: 0;
+   }
+}
+
+
+/*============================================================================
+ ==========================================================================
+    HEADER & Main navigation mobile first - optimized for 320-767px
+/*============================================================================
+/*============================================================================*/
+
+/* hide big desktop header */
+#main-menu{
+    display:none;
+}
+
+/*hides the desktop menu and mobile superfish-3 & 4 horizontal version*/
+#superfish-2,
+#superfish-2-accordion, 
+#superfish-3 {
+    display:none !important;
+}
+
+/*show the mobile menu superfish-3 & 4*/
+#superfish-3-accordion ul {
+    display:block;
+}
+
+#superfish-4 {
+    font-size:0.75em;
+}
+
+#superfish-4 li a { 
+    margin-right:1.6em !important;
+    /*margin-top: 1em !important;*/
+    border-bottom: 0px !important;
+}
+
+#superfish-4 li.last a{
+    margin-right:0 !important;
+}
+
+/* calendar icon */
+#superfish-4 .sf-item-1 a{
+    width:40px;
+    height:40px;
+    background-color:#999;
+    background-image: url(/sites/default/files/site/calendar-icon-mobile.png);
+    background-repeat: no-repeat;
+    text-indent:-1000em;
+    text-decoration: none;
+    
+}
+/*tickets icon */
+#superfish-4 .sf-item-2 a{
+    width:40px;
+    height:40px;
+    background-color:#999;
+    background-image: url(/sites/default/files/site/tickets-icon-mobile.png);
+    background-repeat: no-repeat;
+    text-indent:-1000em;
+    text-decoration: none;
+    
+}
+/*press icon */
+#superfish-4 .sf-item-3 a {
+    width:40px;
+    height:40px;
+    background-color:#999;
+    background-image: url(/sites/default/files/site/press-icon-mobile.png);
+    background-repeat: no-repeat;
+    text-indent:-1000em;
+    text-decoration: none;
+    
+}
+/*sign-in icon */
+#superfish-4 .sf-item-4 a {
+    width:40px;
+    height:40px;
+    background-color:#999;
+    background-image: url(/sites/default/files/site/login-icon-mobile.png);
+    background-repeat: no-repeat;
+    text-indent:-1000em;
+    text-decoration: none;
+    
+}
+/*hide the STICKY footer -rolls into mobile menu*/
+#footer {
+    display:none;
+}
+
+/* header bar, width 100% */
+#header-bar {
+    width:100%;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top:0;
+    left:0;
+    height:55px;
+    z-index:400;
+    padding:0;
+    min-width: 320px; /* prevent wrapping*/
+}
+
+/*default non-mobile logo settings  */
+#full-logo {
+    display: none;
+    max-width:100%;
+    margin-top:0.8em;
+    margin-left:1.6em;
+}
+
+.responsive-logo {
+    max-width:100%;
+}
+
+#mobile-logo a {
+    display:block;
+    width:114px;
+    height:36px;
+    background-image: url(/sites/default/files/site/mobile-logo.gif);
+    background-repeat: no-repeat;
+    color:rgba(0,0,0,1);
+    float:right;
+    margin:0.6em 1em 0 0;
+    padding:0;
+}
+    
+#mobile-menu-button a {
+    display:block;
+    width:20px;
+    height:16px;
+    background-image: url(/sites/default/files/site/mobile-menu-button.gif);
+    background-repeat: no-repeat;
+    color:rgba(0,0,0,1);
+    float:left;
+    margin:20px 18px 0 20px;
+    padding:0;
+}
+
+#mobile-main-menu {
+    display:block;
+    background-color: #e3e3e3;
+    padding:15px 0;
+    position: absolute;
+    z-index: -10;
+    top: 0px;
+    left: 0px;
+    width:268px;
+}
+
+#mobile-main-menu .menu {
+    font-size:1em;
+    line-height: 1.25em;
+    display:block;
+    padding:0;
+    margin:0;
+    position:relative; /*makes sure the menu stays in the fixed parent block*/
+}
+
+#mobile-main-menu ul.menu {
+    padding:0 15px;
+    list-style-type: none;
+    margin-top:10px 0 0 0;
+}
+/*parent links*/
+#mobile-main-menu ul.menu li {
+    border-bottom: #c0c0c0 1px solid !important;
+    list-style: none;
+    padding: 12px 0 10px 0;
+    margin: 0;
+}
+
+#mobile-main-menu .menu a:link,
+#mobile-main-menu .menu a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+#mobile-main-menu .menu a:hover,
+#mobile-main-menu .menu a:focus,
+#mobile-main-menu.menu a:active {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Menu ON state*/
+#mobile-main-menu a.active {
+    font-weight:600;
+
+}
+
+/*sets the ACTIVE child link to ON state */
+#mobile-main-menu .sf-menu.sf-style-none li li a.active {
+    border-bottom: 0 !important;
+    font-weight:600;
+}
+
+/*styles each child link */
+#mobile-main-menu .menu.sf-menu.sf-style-none li li {
+    padding: 0.625em 0 0.625em 0.625em;
+    margin: 0;
+    border: 0 !important;
+}
+
+#mobile-main-menu .menu.sf-menu.sf-style-none li li.first {
+    /*border-top:1px solid #ccc !important;*/
+    padding-top:20px !important;
+}
+
+#mobile-main-menu .sf-menu.sf-style-none li li a:hover{
+    border-bottom: 0 !important;
+    color: #666666 !important; 
+}
+
+/*sets the ACTIVE parent link to ON state*/
+#mobile-main-menu .sf-menu.sf-style-none li.active-trail  a.menuparent{
+    font-weight:600;
+    border-bottom: 0 !important;
+}
+
+/* overrides to superfish accordian (superfish library- sf-smallscreen.js)*/
+.sf-accordion-toggle {
+    display:none;
+}
+
+/*expand collapse button - text is set in superfish library sf-smallscreen.js*/
+.sf-accordion-button {
+    float:right !important;
+    font-size:1.375em;
+    font-weight:600;
+    padding-right:10px;
+    color: #666666 !important;
+    z-index:300; /*fixes superfish accordion bug preventing tap on lower level childrens' expand/collapse button */
+}
+
+a.sf-depth-1 {
+    float:left;
+}
+
+li.first.sf-depth-2  {
+    margin-top:40px;
+
+}
+
+/*#superfish-4-accordion li{
+    float:left;
+}*/
+
+
+/*container holding member links and search form regions*/
+#header-column3 {
+    display:none; /*hide in mobile*/
+    width:526px;
+    margin:0.625em 1.625em 0 0;
+    padding:0;
+    height:1.125em;
+    float:right;
+}
+
+/*the containing block for the member login and cart*/
+.member-login {  
+    float:right;
+    margin-bottom:0.625em;
+    margin-left:0.250em;
+}
+
+.member-login img {  
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;       
+}
+
+.member-login a:link, a:visited, a:active {
+    color:#666;
+}
+
+.login-icon a, .cart-icon a {
+    text-decoration: none;
+}
+
+.login-name {
+    margin-right:2em;
+    /*margin-bottom:0.635em;*/
+    float:left;
+    padding-top:0.50em;
+    font-size:0.688em;
+    line-height:0.938em;
+    color:#666;
+    text-decoration: none;
+
+}
+
+.login-icon {
+    width:80px;
+    height:16px;
+    background-image: url(/sites/default/files/site/login-icon.png);
+    background-repeat: no-repeat;
+    text-indent:1.8em;
+    padding-top:0.688em;
+    display:block;
+    float:left;
+    text-transform: uppercase;
+    font-size:0.563em;
+    line-height:0.938em;
+    color:#666;
+    text-decoration: none;
+    
+}
+
+.cart-icon {
+    width:40px;
+    height:16px;
+    background-image: url(/sites/default/files/site/shop-icon.png);
+    background-repeat: no-repeat;
+    text-indent: 1.688em;
+    padding-top:0.588em;
+    display:block;
+    float:right;
+    font-size:0.688em;
+    line-height:0.938em;
+    color:#666;  
+}
+
+.cart-icon a {
+    text-decoration: none;
+}
+
+
+#mobile-search-form {
+    display:none;
+    background-color: #999999;
+}
+
+#search-button a {
+    display:block;
+    width:56px;
+    height:16px;
+    background-image: url(/sites/default/files/site/search_submit_icon.jpg);
+    background-repeat: no-repeat;
+    float:right;
+    padding-top:0.688em;
+    text-transform: uppercase;
+    font-size:0.563em;
+    line-height:0.938em;
+    color:#666;
+    text-indent: 2.4em;
+    text-decoration: none; 
+   /*border: 1px solid red;*/
+}
+/*hide the search button that drupal makes*/
+#search-block-form .form-submit {
+    display:none;
+}
+
+/* reset webkit search input browser style */
+#search-block-form input {
+    outline: none;
+}
+
+#search-block-form input[type=text] {
+    font-family: Verdana;
+    font-size: 0.750em;
+}
+    
+#search-block-form input::-webkit-search-decoration,
+#search-block-form input::-webkit-search-cancel-button {
+    display: none; /* remove the search and cancel icon */
+}
+
+/* search input field */
+#search-block-form input[type=text] {
+    background: #ffffff url(/sites/default/files/site/search_submit_icon.jpg) no-repeat right;
+    border: solid 1px #ccc;
+    padding: 4px 0 4px 8px;
+    width: 218px;
+    margin: 0 0 10px 15px;       
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+}
+
+
+
+
+/*mobile landscape 480*/
+/*@media screen and (min-width: 481px) {*/
+   /* side menu doesn't workstry a horzontal menu 
+    on two or three lines?*/
+
+/*}*/
+
+
+/*=============================================================================================
+    TABLET & DESKTOP HEADER
+===========================================================================================*/
+
+@media screen and (min-width: 768px){
+
+/*hide the mobile header and menus*/
+    #mobile-logo a, 
+    #mobile-menu-button a, 
+    #mobile-main-menu, 
+    #mobile-search-form {
+        display:none;
+    }
+
+   /*show the desktop menu*/
+    #superfish-2 {
+        display:block !important;
+    }
+
+    /*hide the mobile menu*/
+    #superfish-3-accordion ul,
+    #superfish-4 {
+        display:none !important;
+    }
+
+    /*show the STICKY footer */
+    #footer {
+        display:block;
+    }
+
+    #header-bar {
+        background-color: rgba(255,255,255,1);
+        height:90px;
+        position: relative;
+        max-width: 1200px ;
+        margin: auto;
+        margin-top:0;
+        /*border-bottom: 1px dotted #dddddd;*/
+    }
+
+    #full-logo  {
+        display: block;
+        margin-top:1em;
+        margin-left:1.5em;
+        /*padding-top: 0.3em;*/
+    }
+
+    #header-bar #main-menu {
+        display:inline-block;
+        width:526px;
+        margin-left:15px;
+        padding:0;
+        margin-top:1em;
+    }
+
+    #header-bar #main-menu .menu {
+        font-size:1em;
+        display:block;
+    }
+
+    #header-bar #main-menu .menu ul {
+        float: left;
+        margin: 0;
+        padding:0;
+        list-style-type: none;
+    }
+
+    #header-bar #main-menu .menu li {
+        float: left;
+        display:inline;
+        padding-right:1.9em;
+        font-weight:400;
+    }
+
+    #header-bar #main-menu .menu li.last {
+        padding-right:0;
+    }
+
+    #header-bar #main-menu .menu a:link,
+    #header-bar #main-menu .menu a:visited {
+        text-decoration: none;
+        color: #000000;
+        border:none;
+    }
+
+    #header-bar #main-menu .menu a:hover,
+    #header-bar #main-menu .menu a:focus,
+    #header-bar #main-menu .menu a:active {
+        text-decoration: none;
+        color: #000000;
+        border-bottom: 1px solid #000000;    
+    }
+    
+   /* Main Menu ON state*/
+    #main-menu a.active{
+        font-weight:600;
+        border-bottom: 1px solid #000000;  
+        background-color: #ffffff;
+    }
+
+    /*sets the ACTIVE parent link to ON state*/
+    #main-menu .sf-menu.sf-style-none li.active-trail  a.menuparent{
+        font-weight:600;
+        border-bottom: 1px solid #000000;  
+    }
+
+    /*sets the ACTIVE child link to ON state */
+    #main-menu .sf-menu.sf-style-none li li a.active {
+        border-bottom: 0 !important;
+        font-weight:600;
+    }
+        
+    /* positions the drop down menu*/
+    .sf-menu li:hover > ul,
+    .sf-menu li.sfHover > ul {
+        left: -1em;
+        top: 2.88em; 
+    }
+    
+    /*styles each sub nav link in the drop down */
+    #main-menu .menu.sf-menu.sf-style-none li li {
+        background: rgba(255,255,255,1);
+        font-size:14px;
+        padding:10px 15px;
+        margin:0;
+        border-left:1px solid #e3e3e3;
+        border-right:1px solid #e3e3e3;
+        }
+
+    #main-menu .menu.sf-menu.sf-style-none li li.last {
+        border-bottom:1px solid #ccc;
+        padding-bottom:15px;
+        }
+
+    #main-menu .sf-menu.sf-style-none li li a:hover{
+        border-bottom: 0 !important;
+        color: #666666 !important; 
+        }
+
+    /*container holding member links and search form regions*/
+    #header-column3 {
+        display:block;
+    }
+
+    /*hide search box*/
+    #search-block-form {
+        display:none;
+    }
+
+}
+
+/* =============================================================
+    LARGE DESKTOP HEADER 
+    1080px - 1200px (1200px max width is set by grid container)
+===============================================================*/
+@media screen and (min-width: 1020px) {
+
+   #full-logo {
+        display: block;
+        margin-top:0.6em;
+        margin-left:1.8em;
+    }
+
+    #header-bar {
+        position: relative;
+        max-width: 1200px ;
+        margin: auto;
+        margin-top:0;
+    }
+
+    #header-bar #main-menu {
+        margin-top:2.75em;
+        width:580px;
+    }
+
+    #header-bar #main-menu .menu li {
+        padding-right:2.2em;        
+    }
+
+     #header-bar #main-menu .menu li.last {
+        padding-right:0;         
+    }
+
+    /* positions the drop down menu*/
+    .sf-menu li:hover > ul,
+    .sf-menu li.sfHover > ul {
+        left: -1em;
+        top: 2.90em;       
+    }
+
+  /*SHORT STACK VERSION - container holding member links and search form regions - */
+    #header-column3 {
+        display:block;
+        width:150px;
+        height:3em;    
+    }
+
+    .member-login { 
+        width:146px;
+        float:right;
+        margin-bottom: 0.375em;
+    }
+
+    .login-name {
+        padding:0 0 0.688em 0;
+        width:150px;
+        margin:0;
+    }
+    
+    /*hide small search button*/
+    #search-button {
+        display:none;
+    }
+
+    /*show search box*/
+    #search-block-form {
+        display:block;
+    }
+
+    #search-block-form input[type=text] {
+        width: 148px;
+        margin:0;
+    }
+
+}

@@ -1,0 +1,660 @@
+/*========================================================================== */
+/* Base styles
+/*========================================================================== */
+
+html {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-size: 100%; /* Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. */
+    -ms-text-size-adjust: 100%; /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+    -webkit-text-size-adjust: 100%; /* same as above */
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #000000;
+    font-family: "ff-unit-web", Arial, sans-serif; /*Address `font-family` inconsistency between `textarea` and other form elements.*/
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ * 3. Allow only vertical resizing of textareas. */
+textarea {
+    
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical; /* 3 */
+}
+
+
+/*Address margins handled incorrectly in IE 6/7.*/
+body {
+    margin: 0; 
+    padding:0;
+    b/*ackground-color: #e3e3e3;*/
+}
+
+
+/* Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #333333;
+    text-shadow: none;
+}
+
+::selection {
+    background: #333333;
+    text-shadow: none;
+}
+
+/** horizontal rule */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e3e3e3;
+    margin: 1em 0;
+    padding: 0;
+    -moz-box-sizing: content-box; /*Address differences between Firefox and other browsers. Issue:no IE 6/7 normalization.*/
+    box-sizing: content-box;
+}
+
+hr.dotted {
+    display: block;
+    height: 3px;
+    /*border: 0;*/
+    border-top: 1px dotted #ccc;
+    background-image: url('/sites/default/files/site/hr_dotted.gif');
+    margin: 0;
+    padding:0;
+    -moz-box-sizing: content-box; /*Address differences between Firefox and other browsers. Issue:no IE 6/7 normalization.*/
+    box-sizing: content-box;
+}
+
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/* Mobile Links */
+/* ------------------------------------------------- */
+a:link {
+    color: #000000;
+    text-decoration: underline;
+    /*border-bottom: 1px solid #C9C9C9;
+   text-decoration: none;*/
+}
+a:visited {
+    color: #333333;
+    text-decoration: underline;
+   /* text-decoration: none;
+    border-bottom: 1px solid #C9C9C9;*/
+}
+a:hover {
+    /*text-decoration: none;*/
+    color: #333333;
+   /* border-bottom: 1px solid #000000;*/
+    /*color: #d2232a;
+    border-bottom: 1px solid #d2232a;*/
+    outline: 0; /* Improve readability when focused and also mouse hovered in all browsers.*/
+}
+a:focus {
+    color: #333333;
+    text-decoration: underline;
+   /* text-decoration: none;
+    border-bottom: 1px solid #999;*/
+    outline: 0; /** Address `outline` inconsistency between Chrome and other browsers.*/
+}
+a:active {
+    color: #333333;
+    text-decoration: underline;
+    /*text-decoration: none;
+    border-bottom: 1px solid #999;*/
+    outline: 0; /* Improve readability when focused and also mouse hovered in all browsers.*/
+}
+
+img a:link ,
+img a:visited { /* remove the default blue border displayed in some browsers */
+    /*border-bottom: 0px solid #999;*/
+}
+
+/*p a:link {
+    color: #4c63e7;
+    text-decoration: underline;
+    font-weight: 400;
+}*/
+
+/* ==========================================================================*/
+/*  Global typography                                                        */
+/* ==========================================================================*/
+
+/* Global Typography for Mobile */
+/* --------------------------------------------- */
+
+body, h1, h2, h3, h4, h5, h6, p, table, tr, td, th, ul, li, ol, dd, dl {
+    font-family: "ff-unit-web", Arial, sans-serif;
+}
+
+p, table, tr, td, th, ul, li {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+
+h1 { /*use for page titles*/
+    font-weight: 500;
+    font-size: 1.4em;
+    font-style: normal;
+    line-height: 1em;
+    margin-bottom:0.4em; /*this is needed when paired with h2 subhead*/
+    margin-top: 1em;
+
+}
+
+h1 + h2 {
+    margin:0 0 0.4em 0; /*this is needed when paired with h2 subhead*/
+}
+
+h1.slab { /*use for page titles*/
+    font-family: "ff-unit-slab-web", Arial, sans-serif;
+    }
+
+h2 { /*use for subheads to h1 page titles*/
+    font-weight: 300;
+    font-size: 1em;
+    /*font-style: italic; */
+    line-height: 1em;
+    margin: 0.67em 0 0 0; /*this is needed when paired with h1 page title*/
+
+}
+
+h2.slab { /*use for subheads to h1 page titles*/
+    font-family: "ff-unit-slab-web", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    /*font-style: italic;*/
+    margin: 0.67em 0 0 0;
+
+}
+
+.field-name-body h2, /*if an h2 is put in body field accidentally, style it like an h3 tag*/
+h3 { /*use for section heads*/
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.250em;
+    font-style: normal;
+    /*margin: 1em 0 0 0;*/
+    /*display: block;*/
+}
+
+h4 { /*use for section head subheads*/
+    font-weight: 600;
+    font-size: 0.875em;
+    font-style: normal;
+    margin: 1.67em 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+
+}
+
+
+h5 { /*use for pod heads*/
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.250em;
+    font-style: normal;
+    margin: 1.67em 0 0.3em 0;
+
+}
+
+
+h6 { /*use for TBD*/
+    font-weight: 500;
+    font-size: 1em;
+    font-style: normal;
+    margin: 2.33em 0 0 0;
+
+}
+
+
+strong, b {
+    font-weight: 500;
+    /*font-weight: bold; Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.*/
+}
+
+small {
+    font-size:13px;
+    font-size: 0.813em;
+}
+
+
+/*  desktop */
+/* --------------------------------------------- */
+@media screen and (min-width: 909px) {
+
+    h1 { /*use for page titles*/
+    font-weight: 500;
+    font-size: 1.8em;
+    font-style: normal;
+    line-height: 1em;
+    margin-bottom:0.4em; /*this is needed when paired with h2 subhead*/
+    margin-top: 1em;
+
+}
+
+h1 + h2 {
+    margin:0 0 0.4em 0; /*this is needed when paired with h2 subhead*/
+}
+
+h1.slab { /*use for page titles*/
+    font-family: "ff-unit-slab-web", Arial, sans-serif;
+    }
+
+h2 { /*use for subheads to h1 page titles*/
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1em;
+    margin: 0.67em 0 0 0; /*this is needed when paired with h1 page title*/
+   
+
+}
+
+h2.slab { /*use for subheads to h1 page titles*/
+    font-family: "ff-unit-slab-web", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    margin: 0.67em 0 0 0;
+
+}
+
+}
+
+/* ==========================================================================*/
+/*  LISTS                                                                    */
+/* ==========================================================================*/
+
+/* Lists for Mobile */
+/* --------------------------------------------- */
+
+ul {
+    list-style: none;
+    list-style-image: none;
+}
+
+li{
+    margin-bottom:0.750em;
+}
+li a:link{}
+li a:hover{}
+
+.link-list li {
+    margin-bottom:0;
+}
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 0;
+}
+
+dd {
+    margin: 0 0 0 0px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 0px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/*Add bullets to lists in the full description field*/
+.field-name-body ul, /*#main-content ul*/ .page.full ul{
+    list-style-image: url('/sites/default/files/site/bullet_black.gif');
+    margin: 0 0 0 2em;
+}
+
+.field-name-body ol {
+    margin: 0 0 0 2em;
+
+}
+
+
+/* ==========================================================================*/
+/*  Embedded content                                                           */
+/* ==========================================================================*/
+
+
+/* Mobile */
+img {
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    max-width:100%;/*note: need to fix image scaling for mobile - it is jumping to the thumbnail version 100%
+*/
+    height: auto;
+    -ms-interpolation-mode: bicubic; /* Improve image quality when scaled in IE 7. */
+}
+
+
+
+#banner-inline {
+    /*display:none;*/
+    /*clip:rect(75px,0,78px,0);*/
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table, th, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #e3e3e3;
+    padding:0.5em;
+    font-size: 0.938em;
+    line-height: 1.25em;
+
+}
+
+
+th {
+    background-color: #DAE3EC !important;
+    border: 1px solid #ffffff;
+}
+
+
+/* ==========================================================================
+   Action Buttons
+   ========================================================================== */
+
+a.button.actionButton, a.actionButton  {
+   /* font-size:14px;
+    font-size:1em;*/
+    background-color: #000000;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: 1px solid #000000;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    padding: 0.375em 2.375em 0.125em 0.500em;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    background-image: url('/sites/default/files/site/arrow_white_solid.png');
+    background-repeat:no-repeat;
+    background-position:right center;
+    margin:0.625em 0 0.375em 0; /*note drupal puts buttons in p tag so this is compensating for that spacing.*/
+}
+
+a.actionButton:visited {
+    color: #FFFFFF;
+}
+a.actionButton:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    color: #000000;
+    background-image: url('/sites/default/files/site/arrow_black_solid.png');
+    background-repeat:no-repeat;
+    background-position:right center;    
+}
+
+.actionButton .arrow {
+  content: url('/sites/default/files/site/arrow_white.png');
+}
+
+.button {
+    margin: 0;
+}
+
+.actionButtonOff  {
+    background-color: #e3e3e3;
+    font-weight: 500;
+    letter-spacing: .2px;
+    border-radius: 4px 4px 4px 4px;
+    color: #333;
+    padding: 0.375em 0.625em 0.125em 0.500em;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    margin:0em 0 0.4em 0; /*note drupal puts buttons in p tag so this is compensating for that spacing.*/
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.floatright {
+    float:right;
+}
+
+.floatleft {
+    float:left;
+}
+
+img.leftwrap{
+    margin-right: 2em;
+    margin-bottom:1em;
+    margin-top:0.25em;
+}
+
+.rightwrap {
+    margin-left: 1em;
+    margin-bottom:1em;
+}
+
+.greybox {
+    background-color: #e3e3e3;
+    padding:1em;
+}
+
+.blackbox {
+    background-color: #000000;
+    color:#ffffff;
+    padding:1em;
+}
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+
+

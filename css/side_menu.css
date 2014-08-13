@@ -1,0 +1,139 @@
+/* ==========================================================================*/
+/*  SIDEBAR MENU (left navigation- "sidebar first")                  */
+/* ==========================================================================*/
+
+
+
+	#sidebar-left {
+		padding-left: 0px;
+		/*display: none;*/
+	}
+
+	/* hide the sidebar menu in mobile -*/
+	.region-sidebar-first ul.menu {
+		display: none;
+		
+	}
+	
+	.region-sidebar-first ul.menu li a:link,
+	.region-sidebar-first ul.menu li a:visited,
+	.region-sidebar-first ul.menu li a:hover,
+	.region-sidebar-first ul.menu li a:focus,
+	.region-sidebar-first ul.menu li a:active {
+    text-decoration: none;  
+	}
+
+	.region-sidebar-first .menu {
+		margin:0;
+	}
+
+	/* this is any left sidebar subnav LI */
+	.region-sidebar-first ul.menu li {
+		list-style: none;
+		padding-left: 2px;
+	}
+
+	/*make top title uppercase and larger*/
+	.region-sidebar-first ul.menu .first .last .expanded .active-trail li {
+		font-size: 1em;
+		font-size: 16px;
+		text-transform: uppercase;;
+	}
+
+	.region-sidebar-first ul.menu {
+		padding-bottom: 0.4em;
+
+	}
+	.region-sidebar-first ul.menu li a:link {
+    text-decoration: none;
+    width:100%;
+    /*padding: 0.2em;*/
+    font-size: 0.875em;
+    font-size: 14px;
+    display:block;
+    font-style: normal;
+    border:none;
+	}
+
+	.region-sidebar-first .menu-block-wrapper {
+		margin-bottom: 1em;
+	}
+
+
+
+
+	/* style menu block title  */
+	.region-sidebar-first h2 a:link,
+	.region-sidebar-first h2 a:visited,
+	.region-sidebar-first h2 a:hover,
+	.region-sidebar-first h2 a:focus,
+	.region-sidebar-first h2 a:active {
+		text-transform: uppercase;
+		clear:both;
+		background-color: #e3e3e3;
+		color:#000000;
+		margin-bottom:0.5em;
+		text-decoration: none;
+    	width:100%;
+    	padding: 0.2em 0.2em 0 0.5em;
+    	font-size: 0.875em;
+    	font-size: 14px;
+    	display:block;
+    	font-weight: 500;
+    	font-style: normal;
+    	border:none;
+
+	}
+
+	.region-sidebar-first ul.menu li a:visited {
+    	text-decoration: none;
+    	color:inherit;
+    	border:none;    
+	}
+
+	.region-sidebar-first ul.menu li a:hover {
+    text-decoration: none;
+    background-color: #e3e3e3;
+    display:block;
+    border:none;     
+	}
+
+	.region-sidebar-first ul.menu li a:focus,
+	.region-sidebar-first ul.menu li a:active {
+    text-decoration: none; 
+    border:none;   
+	}
+
+
+	/*bold top level list .sf-depth-2 */
+	.region-sidebar-first ul.menu li a.menuparent,
+	.region-sidebar-first ul.menu li.menu-mlid-2015, /*donate*/
+	.region-sidebar-first ul.menu li.menu-mlid-1784, /*videos*/
+	.region-sidebar-first ul.menu li a.sf-depth-2 {
+		font-weight: 500;
+	}
+
+	.region-sidebar-first ul.menu li a.sf-depth-3 {
+		font-weight:300;
+	}
+
+	/*highlight active link*/
+	a.active {
+		background-color: #e3e3e3;
+
+	}
+
+/*  Sidebar desktop */
+/* ------------------------------------------------- */
+@media screen and (min-width: 768px) {
+
+	/*show sidebar*/
+	.region-sidebar-first ul.menu {
+		display: block;
+	}
+
+	#sidebar-left {
+		display: block;
+	}
+
+}

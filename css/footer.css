@@ -1,0 +1,143 @@
+/*TO DO notes
+- footer disappears on mobile & folds into mobile menu 
+- smaller screen sizes: hide quote and use that space
+- for microsites, hide visit menu or show reduced visit menu*/
+
+#footer {
+	width: 100%;
+	background-color: #f0f0f0;
+	font-size: 0.875em;
+	line-height:1.75em;
+	font-weight:300;
+	padding-left: 4.6232877%;
+	padding-right: 4.6232877%;
+	padding-top: 3.2534247%;
+	padding-bottom: 3.2534247%;
+	margin:0;
+}
+
+/*hide the block title*/
+#footer h2 {
+	display:none;
+	padding:0;
+	margin:0;
+}
+
+#footer ul li.leaf, #footer ul li.collapsed {
+	list-style: none;
+	list-style-image: none;
+
+}
+
+#footer ul.menu li {
+	margin-left:0;
+
+}
+
+#footer a:link, #footer a:visited {
+	text-decoration: none;
+	color:#000000;
+}
+
+#footer a:hover, #footer a:focus, #footer a:active {
+	text-decoration: underline;
+	color:#000000;
+}
+
+.footer-col1 {
+	width:16.5%;
+	padding:0; 
+	float:left;
+	margin: 0 4.6232877% 0 0;
+}
+
+p.copyright {
+	font-size:0.750em;
+	margin-top:1em;
+}
+
+.footer-col2 {
+	width:16%;
+	padding:0; 
+	float:left;
+	margin: 0 4.6232877% 0 0;
+}
+
+.footer-col2 p {
+	font-family: 'ff-unit-slab-web';
+	font-weight: 500; 
+	font-size: 0.9em;
+	line-height:1.70em;
+	color:#555;
+	margin:0;
+	padding:5em 0 0 0;
+}
+
+.footer-col3 {
+	width:34%;
+	border-left:1px dotted #999;
+	border-right:1px dotted #999;
+	padding:0 0 0 4.6232877%; 
+	float:left;
+	margin:0;
+}
+
+.footer-col3 h3 {
+	padding-bottom:0.625em;
+	padding-top:12px;
+	margin:0;
+	font-size:1.5em;
+}
+
+.region-footer-col3 ul {
+	float:left;	
+	margin:0 11% 0 0;
+}
+
+.footer-col4 {
+	width:18.5%;
+	margin:0 0 0 4.6232877%; 
+	float:left;
+	padding: 2px 0 0 0px;
+}
+
+
+.social-block {
+	display:block;
+	float:left;
+	padding:0;
+	margin:0 0 24px 0;
+}
+
+.social-block p {
+	padding:0;
+	margin:0;
+}
+
+.social-block li {
+	display:inline;
+	margin-right:6px;
+}
+
+
+
+/*Cookie Preferences*/
+#teconsent-parent u { 
+	text-decoration:inherit; 
+}
+
+#teconsent-parent li {
+  	
+	line-height: 1.875em;
+	
+}
+#teconsent { 
+  	margin-right:25px; 
+  	position:relative; 
+}
+#teconsent img { 
+  	top:-3px; 
+  	right:-27px; 
+  	padding:0 !important; 
+}
+
